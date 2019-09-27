@@ -8,6 +8,7 @@ This is a **Online-Tutor** application where a user can view,search and comment 
 
 It provides a wide range of videos that the users can be able to look for and be able to learn from the topics they are interested in.
 
+
 ## User Story
 
 - A user can view the video content on the site.
