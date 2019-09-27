@@ -1,0 +1,23 @@
+
+{% extends 'layout.html' %}
+{% block content %}
+  <h1>About page</h1>
+  <!-- Jumbotron -->
+<div class="card card-image" style="background-image: url(https://i.ibb.co/JHYkx1R/about3.jpg);">
+  <div class="text-white text-center rgba-stylish-strong py-5 px-4">
+    <div class="py-5">
+
+      <!-- Content -->
+      <h5 class="h5 orange-text"><i class="fas fa-book-open fa-spin"></i>Online Tutor</h5>
+      <h2 class="card-title h2 my-4 py-2">Welcome to the Online Tutor website!</h2>
+      <p class="mb-4 pb-2 px-md-5 mx-md-5">Hi there.Once again welcome to the online tutore website.This is just a quick welcoming message
+         and a brief explanation about this blog.Here, you can get to search useful resources/content surrounding the web development space
+         that you ight be interested to learn or research on.We have a wide variety of resource links to help you find what you are looking
+         for.Enjoy!</p>
+      <a href="{{ url_for('main.home') }}"class="btn rgba(244, 67, 54, 0.7) rgba-red-strong"><i class="fas fa-clone left"></i> See Content</a>
+
+    </div>
+  </div>
+</div>
+<!-- Jumbotron -->
+{% endblock content%}
