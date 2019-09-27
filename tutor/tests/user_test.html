@@ -1,0 +1,26 @@
+import unittest
+from tutor.models import User,Post,Comment
+from tutor import db
+
+
+class UserTest(unittest.TestCase):
+    def setUp(self):
+
+        self.new_user = User(id=1,username='Pumba', email='cthiaine@gmail.com', image_file='default.jpg', password='remenis')
+
+    def test_instance(self):
+        self.assertTrue(isinstance(self.new_user,User))
+
+    def tearDown(self):
+        User.query.delete()
+
+
+    def test_password_setter(self):
+        self.assertTrue(self.new_user.pass_secure is not None)
+
+    def test_no_access_password(self):
+        with self.assertRaises(AttributeError):
+            self.new_user.password
+
+    def test_password_verification(self):
+        self.assertTrue(self.new_user.verify_password('remenis'))
